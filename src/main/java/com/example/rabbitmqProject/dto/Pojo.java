@@ -1,4 +1,4 @@
-package com.example.rabbitmqProject;
+package com.example.rabbitmqProject.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

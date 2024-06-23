@@ -1,4 +1,4 @@
-package com.example.rabbitmqProject;
+package com.example.rabbitmqProject.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -27,7 +27,7 @@ public class SecurityConfig {
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.httpBasic(Customizer.withDefaults());
         http.authorizeHttpRequests(authorize ->
-                authorize.requestMatchers("/healthCheck", "/sendMessage").permitAll()
+                authorize.requestMatchers("/healthCheck", "/sendMessage", "/sendJsonMessage").permitAll()
                 .anyRequest().authenticated())
                 .csrf(csrf -> csrf.disable());
 //        http.csrf(csrf -> csrf.disable());
